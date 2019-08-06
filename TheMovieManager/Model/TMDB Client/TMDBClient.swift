@@ -10,7 +10,6 @@ import Foundation
 
 class TMDBClient {
     
-    //TODO:Place in .gitignore
     //Access Token Key
     //
     static let apiKey = Config.API_KEY
