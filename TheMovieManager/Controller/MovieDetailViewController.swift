@@ -16,13 +16,19 @@ class MovieDetailViewController: UIViewController {
     
     var movie: Movie!
     
+    //MARK: WatchList
+    // If true shows WatchList
     var isWatchlist: Bool {
         return MovieModel.watchlist.contains(movie)
     }
     
+    //MARK: Favorites
+    //If true shows favorites
     var isFavorite: Bool {
         return MovieModel.favorites.contains(movie)
     }
+    
+    //MARK: LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +48,13 @@ class MovieDetailViewController: UIViewController {
         
     }
     
+    
     @IBAction func watchlistButtonTapped(_ sender: UIBarButtonItem) {
         TMDBClient.addToWatchList(movieId: movie.id, watchlist: !isWatchlist, completion: handleWatchListResponse(success:error:))
     }
     
+    //MARK: Helper Functions
+    // Adds watch lists movies to the watch list array
     func handleWatchListResponse(success: Bool, error: Error?){
         if success {
             if isWatchlist {
@@ -61,6 +70,7 @@ class MovieDetailViewController: UIViewController {
         TMDBClient.addToFavorites(movieId: movie.id, favorite: !isFavorite, completion: handleFavoritesList(success:error:))
     }
     
+    //Adds Favorite movies to favorite move array
     func handleFavoritesList(success: Bool, error: Error?){
         if success {
             if isFavorite{

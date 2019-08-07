@@ -13,12 +13,16 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var movies = [Movie]()
+    //MARK: Outlets
     
+    //contains searh bar results
+    var movies = [Movie]()
+    //Where you select the movie on the tableVie
     var selectedIndex = 0
     
     var currentSearchTask: URLSessionDataTask?
     
+    //MARK: Lifecycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let detailVC = segue.destination as! MovieDetailViewController
@@ -28,6 +32,8 @@ class SearchViewController: UIViewController {
     
 }
 
+//MARK: Search Extension
+//This will be removed after the new ui is in mostlikley....
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

@@ -9,7 +9,10 @@
 import Foundation
 
 class MovieModel {
-    
+    //Whole class used for showing movies in different views using
+    //Singleton style
+    //TODO: Not make this a singleton
+    //Singleton use of watchlist and favorites
     static var watchlist = [Movie]()
     static var favorites = [Movie]()
     

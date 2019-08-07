@@ -14,6 +14,8 @@ class FavoritesViewController: UIViewController {
     
     var selectedIndex = 0
     
+    //MARK: Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +30,9 @@ class FavoritesViewController: UIViewController {
         tableView.reloadData()
     }
     
+    //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Detail View Segue
         if segue.identifier == "showDetail" {
             let detailVC = segue.destination as! MovieDetailViewController
             detailVC.movie = MovieModel.favorites[selectedIndex]
