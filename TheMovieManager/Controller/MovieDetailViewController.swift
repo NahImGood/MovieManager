@@ -1,9 +1,8 @@
 //
 //  MovieDetailViewController.swift
-//  TheMovieManager
 //
-//  Created by Owen LaRosa on 8/13/18.
-//  Copyright © 2018 Udacity. All rights reserved.
+//  Created by Eli Warner
+//  Copyright © 2018. All rights reserved.
 //
 
 import UIKit
@@ -29,7 +28,6 @@ class MovieDetailViewController: UIViewController {
     }
     
     //MARK: LifeCycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = movie.title

@@ -36,6 +36,7 @@
 		2316888F2122646A003C820E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316888E2122646A003C820E /* GradientView.swift */; };
 		2316889121226AE7003C820E /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2316889021226AE7003C820E /* LoginTextField.swift */; };
 		84026E5222F900AB007E4F85 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84026E5122F900AB007E4F85 /* config.swift */; };
+		8440D5FA23FBA6B60040F62B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440D5F923FBA6B60040F62B /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		2316888E2122646A003C820E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2316889021226AE7003C820E /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		84026E5122F900AB007E4F85 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		8440D5F923FBA6B60040F62B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		2316885C2121C956003C820E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8440D5F623FBA6520040F62B /* Controller Upgrades */,
 				2316884A2121C92C003C820E /* LoginViewController.swift */,
 				2316885E2121CA19003C820E /* MovieDetailViewController.swift */,
 				231688602121CA30003C820E /* SearchViewController.swift */,
@@ -200,6 +203,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		8440D5F623FBA6520040F62B /* Controller Upgrades */ = {
+			isa = PBXGroup;
+			children = (
+				8440D5F923FBA6B60040F62B /* HomeVC.swift */,
+			);
+			path = "Controller Upgrades";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,6 +243,7 @@
 				TargetAttributes = {
 					231688442121C92C003C820E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -289,6 +301,7 @@
 				2316888F2122646A003C820E /* GradientView.swift in Sources */,
 				2316887F2121CBC7003C820E /* MarkFavorite.swift in Sources */,
 				2316887B2121CB87003C820E /* TMDBResponse.swift in Sources */,
+				8440D5FA23FBA6B60040F62B /* HomeVC.swift in Sources */,
 				231688652121CA51003C820E /* FavoritesViewController.swift in Sources */,
 				231688492121C92C003C820E /* AppDelegate.swift in Sources */,
 				2316889121226AE7003C820E /* LoginTextField.swift in Sources */,
@@ -449,7 +462,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = EGW.TheMovieManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -467,7 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = EGW.TheMovieManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

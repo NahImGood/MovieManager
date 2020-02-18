@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             if success {
                 DispatchQueue.main.async {
                 UIApplication.shared.open(TMDBClient.Endpoints.webAuth.url
-                    , options: [:], completionHandler: nil)
+                    , options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
                 }
             }
         }
@@ -90,4 +90,9 @@ class LoginViewController: UIViewController {
         show(alertVC, sender: nil)
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
